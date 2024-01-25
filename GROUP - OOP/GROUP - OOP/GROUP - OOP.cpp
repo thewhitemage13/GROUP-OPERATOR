@@ -210,12 +210,4 @@ int main()
     g += a;
     g.Print();*/
 
-    string a = "Ax";
-    string b = "Alex";
-    
-    if (a == b)
-    {
-        cout << "true";
-    }
-
 }
