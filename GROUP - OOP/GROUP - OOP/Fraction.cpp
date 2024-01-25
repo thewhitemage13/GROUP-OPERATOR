@@ -85,34 +85,3 @@ Fraction operator + (const Fraction& left, double right)
 	result.SetDenominator(left.GetDenominator());
 	return result;
 }
-//Student : 
-
-bool operator < (const string& a, const string& b)
-{
-	return a < b;
-}
-
-bool operator > (const string& a, const string& b)
-{
-	return a > b;
-}
-
-bool operator <= (const string& a, const string& b)
-{
-	return a <= b;
-}
-
-bool operator >= (const string& a, const string& b)
-{
-	return a >= b;
-}
-
-bool operator != (const string& a, const string& b)
-{
-	return a != b;
-}
-
-bool operator == (const string& a, const string& b)
-{
-	return a == b;
-}
