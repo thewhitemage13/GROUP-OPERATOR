@@ -1,4 +1,4 @@
-﻿using namespace std;
+using namespace std;
 #include "Student.h"
 #include "Date.h"
 #include "Group.h"
@@ -102,6 +102,96 @@ bool operator == (const Group& a, const Group& b)
 bool operator != (const Group& a, const Group& b)
 {
     return a.GetCountOfStudent() != b.GetCountOfStudent();
+}
+
+istream& operator >> (const istream& i, Student& d)
+{
+
+        cout << "surname: ";
+        string answear;
+        cin >> answear;
+        d.SetSurname(answear);
+
+        cout << "name: ";
+        cin >> answear;
+        d.SetName(answear);
+
+        cout << "middle name: ";
+        cin >> answear;
+        d.SetMiddlName(answear);
+
+        cout << "adress: ";
+        cin >> answear;
+        d.SetAdress(answear);
+
+        cout << "phonnumber: ";
+        cin >> answear;
+        d.SetPhone(answear);
+
+        cout << "adress: ";
+        cin >> answear;
+        d.SetAdress(answear);
+
+        return cin;
+   
+}
+
+ostream& operator << (const ostream& i, Student& d)
+{
+    d.PrintStudent();
+    d.PrintExam();
+    d.PrintPractic();
+    d.PrintHomeWork();
+    return cout;
+}
+
+istream& operator >> (const istream& i, Group& g)
+{
+
+    cout << "Group Name: ";
+    string answear;
+    cin >> answear;
+    g.SetGroupName(answear);
+
+    cout << "Group Specification: ";
+    cin >> answear;
+    g.SetSpecification(answear);
+
+    cout << "Course: ";
+    unsigned short amswear2;
+    cin >> amswear2;
+    g.SetNumberOfCourse(amswear2);
+
+    return cin;
+
+}
+
+ostream& operator << (const ostream& i, Group& d)
+{
+    d.Print();
+    return cout;
+}
+
+istream& operator >> (const istream& i, Fraction& f)
+{
+
+    cout << "numerator: ";
+    int answear;
+    cin >> answear;
+    f.SetNumerator(answear);
+
+    cout << "denominator: ";
+    cin >> answear;
+    f.SetDenominator(answear);
+
+    return cin;
+
+}
+
+ostream& operator << (const ostream& i, Fraction& f)
+{
+    f.Print();
+    return cout;
 }
 
 int main()
@@ -210,4 +300,16 @@ int main()
     g += a;
     g.Print();*/
 
+   Student s;
+   cin >> s;
+   cout << s;
+
+
+    Group g;
+    cin >> g;
+    g.Print();
+
+    Fraction f;
+    cin >> f;
+    cout << f;
 }
