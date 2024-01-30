@@ -304,7 +304,6 @@ int main()
    cin >> s;
    cout << s;
 
-
     Group g;
     cin >> g;
     g.Print();
